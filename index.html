@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Changer</title>
+    <style>
+        p {
+            font-size: 16px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="styled-paragraph">Change my style using the buttons below!</p>
+    <button id="make-bold">Make Bold</button>
+    <button id="change-color">Change Color</button>
+    <button id="reset-style">Reset</button>
+
+    <script>
+        const paragraph = document.getElementById('styled-paragraph');
+        const boldButton = document.getElementById('make-bold');
+        const colorButton = document.getElementById('change-color');
+        const resetButton = document.getElementById('reset-style');
+
+        boldButton.addEventListener('click', () => {
+            paragraph.style.fontWeight = 'bold';
+        });
+
+        colorButton.addEventListener('click', () => {
+            paragraph.style.color = 'blue';
+        });
+
+        resetButton.addEventListener('click', () => {
+            paragraph.style.fontWeight = 'normal';
+            paragraph.style.color = 'black';
+        });
+    </script>
+</body>
+</html>
